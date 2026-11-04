@@ -856,25 +856,35 @@ h2{
 /* ---------- баннер над контентом ---------- */
 
 .promo{
-  display:grid;
-  grid-template-columns:auto minmax(0,1fr) auto;
+  display:flex;
   align-items:center;
-  gap:clamp(14px,3vw,26px);
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:clamp(12px,2.4vw,20px);
   margin:clamp(14px,2.4vw,22px) 0 0;
-  padding:clamp(14px,2.4vw,20px) clamp(16px,3vw,24px);
+  padding:clamp(14px,2.2vw,18px) clamp(16px,3vw,24px);
   background:linear-gradient(120deg,#ffffff 0%,#f1f9ff 55%,#eaf7f5 100%);
   border:1.5px solid rgba(47,111,237,.32);
   border-radius:20px 120px 18px 110px / 110px 18px 120px 20px;
   box-shadow:var(--shadow);
 }
 
+.promo-lead{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex:1 1 320px;
+  min-width:0;
+}
+
 .promo-img{
   display:block;
-  width:clamp(64px,9vw,92px);
-  height:clamp(64px,9vw,92px);
+  width:56px;
+  height:56px;
+  flex:0 0 auto;
   object-fit:cover;
   object-position:center;
-  border-radius:24px 60px 22px 56px / 56px 22px 60px 24px;
+  border-radius:16px 34px 14px 30px / 30px 14px 34px 16px;
   border:1.5px solid rgba(28,63,96,.22);
   background:#fff;
 }
@@ -904,9 +914,8 @@ h2{
   color:#3d6183;
 }
 
-@media (max-width:760px){
-  .promo{grid-template-columns:auto minmax(0,1fr)}
-  .promo .cta-btn{grid-column:1 / -1;width:100%;justify-content:center}
+@media (max-width:560px){
+  .promo .cta-btn{width:100%;justify-content:center}
 }
 
 /* файл для скачивания */
