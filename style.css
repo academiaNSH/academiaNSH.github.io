@@ -855,6 +855,13 @@ h2{
 
 /* файл для скачивания */
 
+.cta--blue{
+  border-color:rgba(47,111,237,.38);
+  background:linear-gradient(180deg,#ffffff,#f2f8ff);
+}
+
+.cta--blue .cta-title{color:#1d4568}
+
 .cta--file{
   border-color:rgba(240,180,41,.55);
   background:linear-gradient(180deg,#fffefa,#fff8e8);
