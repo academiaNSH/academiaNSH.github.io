@@ -879,14 +879,15 @@ h2{
 
 .promo-img{
   display:block;
-  width:56px;
-  height:56px;
+  width:112px;
+  height:112px;
   flex:0 0 auto;
   object-fit:cover;
   object-position:center;
-  border-radius:16px 34px 14px 30px / 30px 14px 34px 16px;
+  border-radius:26px 60px 24px 54px / 54px 24px 60px 26px;
   border:1.5px solid rgba(28,63,96,.22);
   background:#fff;
+  filter:saturate(1.85) contrast(1.12) brightness(1.02);
 }
 
 .promo-label{
@@ -915,6 +916,7 @@ h2{
 }
 
 @media (max-width:560px){
+  .promo-img{width:88px;height:88px}
   .promo .cta-btn{width:100%;justify-content:center}
 }
 
