@@ -19,9 +19,36 @@
 
 html{scroll-behavior:smooth}
 
+/* типографика: без висячих строк и разрывов в неудобных местах */
+
+p,
+li,
+.lead,
+.card p,
+.content p,
+.excerpt p,
+.author-block p{
+  text-wrap:pretty;
+  hyphens:none;
+  -webkit-hyphens:none;
+}
+
+h1,
+h2,
+h3,
+.card h3,
+.cta-title,
+.promo-title,
+.books-name{
+  text-wrap:balance;
+  hyphens:none;
+}
+
 body{
   margin:0;
   min-height:100%;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
   font-family:"Trebuchet MS","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
   font-size:1rem;
   line-height:1.6;
