@@ -44,14 +44,17 @@
   color: var(--ink-soft);
 }
 
-.webinars-grid {
+/* Две колонки: ВКонтакте и МетаШкола */
+.webinar-columns {
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 2.6vw, 22px);
+  gap: clamp(18px, 3vw, 30px);
   margin-top: clamp(18px, 3vw, 28px);
+  align-items: start;
 }
 
-.webinar-group {
-  margin-top: clamp(22px, 4vw, 36px);
+.webinar-column {
+  min-width: 0;
 }
 
 .group-head {
@@ -60,12 +63,12 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 8px 16px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .group-head h2 {
   margin: 0;
-  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
   color: var(--ink);
 }
 
@@ -73,59 +76,57 @@
   margin-top: 0;
 }
 
-.webinar {
-  padding: 0;
-  gap: 0;
-  overflow: hidden;
-}
-
-.webinar::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 6px;
-  background: var(--accent, var(--blue));
-  z-index: 2;
-}
-
-.webinar-cover {
+.webinar-list {
   display: grid;
-  place-items: center;
-  height: 104px;
-  margin-top: 6px;
-  background: var(--cover, #eef5fc);
-  color: var(--accent, var(--blue));
-  border-bottom: 1.5px dashed var(--line-soft);
+  gap: clamp(12px, 2vw, 18px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.webinar-cover svg {
-  width: 46px;
-  height: 46px;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
+.webinar {
+  padding: clamp(16px, 2.4vw, 22px);
 }
 
 .webinar-body {
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   gap: 10px;
-  padding: clamp(16px, 2.4vw, 22px);
+  height: 100%;
+}
+
+.webinar-tag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.webinar-tag--vk {
+  background: #e8f0fe;
+  color: #2f6fed;
+}
+
+.webinar-tag--ms {
+  background: #fdf3dd;
+  color: #946300;
 }
 
 .webinar h3 {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   line-height: 1.35;
   color: var(--ink);
 }
 
 .webinar p {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.55;
   color: var(--ink-soft);
 }
@@ -226,8 +227,8 @@
   cursor: pointer;
 }
 
-@media (max-width: 720px) {
-  .webinars-grid {
+@media (max-width: 820px) {
+  .webinar-columns {
     grid-template-columns: 1fr;
   }
 
