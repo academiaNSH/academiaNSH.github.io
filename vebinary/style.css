@@ -50,6 +50,29 @@
   margin-top: clamp(18px, 3vw, 28px);
 }
 
+.webinar-group {
+  margin-top: clamp(22px, 4vw, 36px);
+}
+
+.group-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-bottom: 14px;
+}
+
+.group-head h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  color: var(--ink);
+}
+
+.group-head .count {
+  margin-top: 0;
+}
+
 .webinar {
   padding: 0;
   gap: 0;
