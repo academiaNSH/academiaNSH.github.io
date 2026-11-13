@@ -30,6 +30,38 @@
   max-width: 60ch;
 }
 
+.head-row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(16px, 3vw, 32px);
+}
+
+.head-text {
+  min-width: 0;
+}
+
+.head-badge {
+  flex: none;
+  width: 110px;
+  height: 110px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  transform: rotate(2deg);
+}
+
+@media (max-width: 720px) {
+  .head-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .head-badge {
+    width: 88px;
+    height: 88px;
+  }
+}
+
 .count {
   display: inline-flex;
   align-items: center;
