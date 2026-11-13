@@ -51,7 +51,8 @@
 }
 
 .webinar {
-  padding-top: calc(clamp(18px, 3vw, 26px) + 6px);
+  padding: 0;
+  gap: 0;
   overflow: hidden;
 }
 
@@ -61,6 +62,35 @@
   inset: 0 0 auto 0;
   height: 6px;
   background: var(--accent, var(--blue));
+  z-index: 2;
+}
+
+.webinar-cover {
+  display: grid;
+  place-items: center;
+  height: 104px;
+  margin-top: 6px;
+  background: var(--cover, #eef5fc);
+  color: var(--accent, var(--blue));
+  border-bottom: 1.5px dashed var(--line-soft);
+}
+
+.webinar-cover svg {
+  width: 46px;
+  height: 46px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.webinar-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: clamp(16px, 2.4vw, 22px);
 }
 
 .webinar h3 {
